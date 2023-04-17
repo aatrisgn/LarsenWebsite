@@ -21,14 +21,14 @@ jobs:
     - name: Create folder
       #Prepare for Party
       run: |
-        mkdir -p dist/PartyFolder && cp -R / dist/PartyFolder
+        mkdir -p dist/PartyFolder && cp -r * dist/PartyFolder
         ls dist/PartyFolder
     - name: Prepare party build
       run: "del dist/PartyFolder/index.html && mv dist/PartyFolder/fest.html dist/PartyFolder/index.html"
     - name: Prepare reception build
       #Prepare for reception
       run: |
-        mkdir -p dist/ReceptionFolder && cp -R / dist/ReceptionFolder
+        mkdir -p dist/ReceptionFolder && cp -r * dist/ReceptionFolder
         ls dist/ReceptionFolder
     - name: Build And Deploy Party
       id: builddeployparty
